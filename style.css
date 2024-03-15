@@ -1,0 +1,464 @@
+
+:root {
+    --text-primary: black;
+    --text-secondary: #f4f4f4;
+    --bg-primary: #8e51fa;
+    --bg-secondary: #cd6be7;
+
+}
+
+
+
+body {
+    background-color: var(--bg-primary);
+    animation-name: clrswtch;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+@keyframes clrswtch {
+    to {
+        background-color: var(--bg-secondary);
+    }
+}
+
+header {
+    display: flex;
+    background-color: #f4f4f4;
+    box-shadow: 0px 20px 25px 17px  #f4f4f4;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 50px;
+    
+}
+
+.logo {
+    height: 90px;
+    width: 140px;
+}
+
+header a {
+    padding: 20px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-right: 40px;
+    background-color: var(--bg-primary);
+    border-radius: 40px;
+    transition: all 0.3s;
+    box-shadow: 0 0 40px var(--bg-secondary);
+}
+
+a:hover {
+    color: black;
+    transform: translateY(-5px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 130px;
+    position: relative;
+
+}
+
+
+
+.bio {
+    display: block;
+    width: 100vw;
+    position: relative;
+    padding-top: 600px;
+
+}
+
+.bio img{
+    height: 500px;
+    width: 100vw;
+    position: absolute;
+    top: -102px;
+    transition: all 0.3s;
+    box-shadow: 0px 20px 25px 17px #f4e0de;
+}
+
+.bio img:hover{
+    transform: translateY(-10px);
+
+}
+
+.bio p {
+    color: var(--text-secondary);
+    font-size: 25px;
+    border-radius: 40px;
+    transition: all 0.3s;
+    cursor: default;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 90px;
+}
+
+.biohead {
+    font-weight: 600;
+}
+
+.bio p:hover{
+    transform: translateY(-10px);
+    color: rgb(253, 239, 241);
+}
+
+.figures {
+    padding: 25px;
+    border-radius: 30px;
+}
+
+.figures p {
+    color: var(--text-secondary);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.figures img {
+    height: 300px;
+    width: 29%;
+    padding: 15px;
+    border: 3px solid pink;
+    border-radius: 40px;
+    transition: all 0.3s;
+}
+
+.figures img:hover{
+    transform: translateY(-10px);
+}
+
+.cta {
+    margin-top: 200px;
+    display: flex;
+    padding: 10px;
+    align-content: center;
+    flex-direction: column;
+}
+
+.cta a {
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--text-secondary);
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid red;
+    transition: all 0.2s;
+}
+
+.ctabtn {
+    color: var(--text-secondary);
+    font-size: 30px;
+    padding-bottom: 40px;
+}
+
+
+
+footer {
+    display: flex;
+    background-color: var(--text-secondary);
+    justify-content: space-between;
+    padding: 20px;
+    font-size: larger;
+    margin-top: 200px;
+}
+
+footer a{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+[class^="ambient"] {
+    background-color: pink;
+    width: 500px;
+    height: 70%;
+    z-index: -1;
+    position: absolute;
+    border-radius: 60%;
+}
+
+.ambient1 {
+    rotate: 40deg;
+    opacity: 20%;
+    animation-name: ambient-motion1;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+.ambient2 {
+    rotate: -40deg;
+    opacity: 40%;
+    animation-name: ambient-motion2;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+.ambient3 {
+    rotate: 90deg;
+    opacity: 10%;
+    animation-name: ambient-motion3;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+
+
+@keyframes ambient-motion1 {
+    to {
+        opacity: 45%;
+        rotate: 270deg;
+        transform: translateY(-110px);
+    }
+}
+@keyframes ambient-motion2 {
+    to {
+        opacity: 10%;
+        rotate: 360deg;
+        transform: translateY(130px);
+    }
+}
+@keyframes ambient-motion3 {
+    to {
+        opacity: 45%;
+        rotate: 200deg;
+        transform: translateY(-150px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    
+    body {
+        background-color: var(--bg-primary);
+        padding: 0;
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    header {
+        display: flex;
+        width: 100vw;
+        background-color:var(--text-secondary);
+        box-shadow: 0px 20px 25px 17px  var(--text-secondary);
+        justify-content: space-between;
+        padding: 20px;
+        margin-bottom: 50px;
+        
+    }
+
+    
+    header a {
+        padding: 10px;
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.3s;
+        margin-right: 20px;
+        background-color: var(--bg-primary);
+        border-radius: 40px;
+        transition: all 0.3s;
+        box-shadow: 0 0 40px var(--bg-secondary);
+
+    }
+    
+    a:hover {
+        color: black;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    section {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin-top: 130px;
+    
+    }
+
+    [class^="ambient"] {
+        background-color: pink;
+        width: 300px;
+        height: 10%;
+        z-index: -1;
+        position: absolute;
+        border-radius: 60%;
+        top: 150px;
+    }
+    
+    
+    
+    .bio {
+        width: 100%;
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        padding-top: 200px;
+    }
+    
+    .bio img{
+        height: 200px;
+        width: 100%;
+        box-shadow: 0px 0px 70px pink ;
+        transition: all 0.3s;
+        box-shadow: 0px 20px 25px 17px #f4e0de;
+    }
+    
+    .bio img:hover{
+        transform: translateY(-10px);
+    
+    }
+    
+    .bio p {
+        color: var(--text-secondary);
+        font-size: 100%;
+        padding: 20px;
+        transition: all 0.3s;
+        font-weight: bold;
+        cursor: default;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 90px;
+    }
+    
+    .bio p:hover{
+        transform: translateY(-10px);
+        color: rgb(253, 239, 241);
+    }
+    
+    .figures {
+        padding: 25px;
+        border-radius: 30px;
+    }
+    
+    .figures p {
+        color: var(--text-secondary);
+        font-size: 120%;
+        font-weight: bold;
+    }
+    
+    .figures img {
+        height: 200px;
+        width: 200px;
+        padding: 15px;
+        border: 3px solid pink;
+        border-radius: 40px;
+        transition: all 0.3s;
+        margin-left: calc(50% - 115px);
+        margin-bottom: 10px;
+    }
+    
+    .figures img:hover{
+        transform: translateY(-10px);
+    }
+    
+    
+    
+    footer {
+        display: flex;
+        width: 100%;
+        background-color: var(--text-secondary);
+        justify-content: space-between;
+        padding: 20px;
+        font-size: 85%;
+        margin-top: 200px;
+
+    }
+    
+    footer a{
+        padding: 10px;
+        color: black;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-weight: bold;
+        align-self: center;
+    }
+
+}
+
+@keyframes ambient-motion3 {
+    to {
+        opacity: 45%;
+        rotate: 200deg;
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes ambient-motion1 {
+    to {
+        opacity: 45%;
+        rotate: 270deg;
+        transform: translateY(-90px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 400px) {
+
+
+    [class^="ambient"] {
+        background-color: pink;
+        width: 360px;
+        height: 13%;
+        z-index: -1;
+        position: absolute;
+        border-radius: 60%;
+    }
+}
